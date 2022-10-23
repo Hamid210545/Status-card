@@ -1,0 +1,197 @@
+@font-face {
+    font-family: Inter;
+    src: url(./Inter-VariableFont_slnt\,wght.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+}
+
+:root {
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--Very-dark-blue);
+}
+
+.card {
+    max-width: 800px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    background-color: var(--Dark-desaturated-blue);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card .img {
+    position: relative;
+    width: 45%;
+}
+
+.img .desktop-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.img .mobile-pic {
+    width: 100%;
+    border-radius: 5px;
+    display: none;
+}
+
+.card .card-details {
+    width: 55%;
+    padding: 40px;
+}
+
+.card-details h1 {
+    font-size: 4rem;
+    padding-bottom: 25px;
+}
+
+.card-details h1 span {
+    color: var(--Soft-violet);
+}
+
+.card-details p {
+    font-size: 1.7rem;
+    color: #ccc;
+    padding-bottom: 60px;
+}
+
+.company-details {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.company-details .box h2 {
+    font-size: 2.2rem;
+    padding-bottom: 5px;
+}
+
+.box .special {
+    font-size: 1.3rem;
+    color: #ccc;
+    padding-bottom: 20px;
+}
+
+
+
+
+/* Media Queries */
+
+
+
+@media(max-width: 700px) {
+    .card {
+        margin-top: 10%;
+        flex-direction: column;
+        width: 350px;
+        height: 20%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .card .img {
+        width: 100%;
+    }
+
+    .card .desktop-pic {
+        width: 100%;
+    }
+
+    .card .card-details {
+        width: 100%;
+    }
+}
+
+@media(max-width: 376px) {
+
+    .container {
+        border: 1px solid red;
+
+    }
+
+    .card {
+        flex-direction: column;
+        width: 330px;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-details .perfume {
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        color: rgb(96, 96, 96);
+        padding-bottom: 15px;
+        margin-top: -10px;
+    }
+
+    .card-details h1 {
+        font-size: 3.3rem;
+        padding-bottom: 25px;
+    }
+
+    .card-details p {
+        font-size: 1.7rem;
+        color: rgb(96, 96, 96);
+        padding-bottom: 25px;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 15px;
+        justify-content: center;
+        padding-right: 20px;
+    }
+
+    .img .desktop-pic {
+        display: none;
+    }
+
+    .img .mobile-pic {
+        display: block;
+        width: 100%;
+        height: 30vh;
+    }
+
+    .company-details {
+        padding-top: 30px;
+        justify-content: center;
+    }
+}
